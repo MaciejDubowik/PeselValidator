@@ -60,12 +60,13 @@ button.addEventListener('click', () => {
 
     const pesel = document.querySelector('#pesel').value
     const checkStatus = checkPesel(pesel)
-    console.log(getGender(pesel));
-    console.log(getDate(pesel));
     result.innerHTML = checkStatus.message
-    if(checkStatus.message === results[2]) {
-        document.getElementById("gender").innerHTML = getGender(pesel);
-        document.getElementById("birthDate").innerHTML = getDate(pesel);
+    if(checkStatus.message.localeCompare(results[2].message) === 0) {
+        document.getElementById("gender").innerHTML = "płeć: " + getGender(pesel);
+        document.getElementById("birthDate").innerHTML = "data urodzenia: " + getDate(pesel);
+    } else {
+        document.getElementById("gender").innerHTML = "";
+        document.getElementById("birthDate").innerHTML = "";
     }
 
 })

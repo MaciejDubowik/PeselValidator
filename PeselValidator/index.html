@@ -3,21 +3,22 @@
 <head>
     <title>Dane osobowe</title>
     <meta charset="utf-8"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
+<div class="d-flex justify-content-center">
+
 <form onsubmit="return false">
-
-    <label for="pesel" class="label">Pesel</label>
-    <input id="pesel" type="number" class="input" min="0" required="required">
-    <button id="button" class="button">Sprawdź</button>
-    <button onClick="window.location.reload();">Refresh Page</button>
+    <h1>Sprawdź numer pesel</h1> <br>
+    <label for="pesel" class="label">numer PESEL: </label>
+    <input id="pesel" type="number" class="input" min="0" required="required"> <br>
+    <button id="button" class="btn btn-primary btn-sm">Sprawdź</button>
     <span id="result" class="result"></span>
+    <p id="gender"></p>
+    <p id="birthDate"></p>
     <script src="validator.js"></script>
-
 </form>
-
-<p id="gender"></p>
-<p id="birthDate"></p>
+</div>
 
 </body>
 </html>
